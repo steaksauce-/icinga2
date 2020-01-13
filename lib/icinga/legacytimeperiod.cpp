@@ -393,8 +393,8 @@ void LegacyTimePeriod::ProcessTimeRanges(const String& timeranges, tm *reference
 	for (const String& range : ranges) {
 		Dictionary::Ptr segment = ProcessTimeRange(range, reference);
 
-		if (segment->Get("begin") >= segment->Get("end"))
-			continue;
+		/*if (segment->Get("begin") >= segment->Get("end"))
+			continue; */
 
 		result->Add(segment);
 	}
